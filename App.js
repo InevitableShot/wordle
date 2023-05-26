@@ -30,7 +30,7 @@ export default function App() {
 
   const checkGameState = () => {
     if (checkIfWon() && gameState !== "won") {
-      Alert.alert("Hooray", "You won!", [{ text: "Share", onPress: shareScore}]);
+      Alert.alert("Hooray", "You won!", [{ text: "Share", onPress: shareScore}, {text: "Close", style: "cancel"}]);
       setGameState("won");
     } else if (checkIfLost() && gameState !== "lost") {
       Alert.alert("You Lost!", "Try again tomorrow.");
