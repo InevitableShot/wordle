@@ -13,7 +13,6 @@ const copyArray = (arr) => {
 
 const random_word = Math.floor(Math.random() * 50);
 const word = words_list[random_word];
-console.log(word);
 
 export default function App() {
   const letters = word.split(""); // ['h', 'e', 'l', 'l', 'o']
