@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, SafeAreaView, ScrollView, Alert } from 'react-native';
-import { colors, CLEAR, ENTER, colorsToEmoji } from './src/constants';
+import { colors, CLEAR, ENTER, colorsToEmoji, words_list } from './src/constants';
 import Keyboard from './src/components/Keyboard';
 import * as Clipboard from "expo-clipboard";
 
@@ -12,7 +12,9 @@ const copyArray = (arr) => {
 }
 
 export default function App() {
-  const word = "hello";
+  const random_word = Math.floor(Math.random() * 50);
+  const word = words_list[random_word];
+  console.log(word);
   const letters = word.split(""); // ['h', 'e', 'l', 'l', 'o']
 
   const [rows, setRows] = useState(
