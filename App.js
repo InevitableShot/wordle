@@ -11,10 +11,11 @@ const copyArray = (arr) => {
   return [...(arr.map((rows) => [...rows]))];
 }
 
+const random_word = Math.floor(Math.random() * 50);
+const word = words_list[random_word];
+console.log(word);
+
 export default function App() {
-  const random_word = Math.floor(Math.random() * 50);
-  const word = words_list[random_word];
-  console.log(word);
   const letters = word.split(""); // ['h', 'e', 'l', 'l', 'o']
 
   const [rows, setRows] = useState(
